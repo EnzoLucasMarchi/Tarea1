@@ -1,0 +1,964 @@
+React:
+	-Componentes
+	-Props
+	-Eventos
+	-Hooks y eventos
+	-useState
+	-ciclo de vida de un componente
+	-async/await
+	-useEffect
+	-Custom Hooks
+	-Fetch API
+	-useContext
+	Librerias:
+		Material UI
+		Primer React
+Api:
+	API
+	API REST
+Git:
+	Ramas
+	Merge y conflictos
+	GITHUB:
+		Pull request
+TailWindCss:
+	Custom Styles
+	Hover, Focus y estados
+	DarkMode
+
+
+///////////////// IMPORTANTES
+
+
+
+---------------------------------------------------API
+En el vasto mundo de la tecnología y el desarrollo de software, las API (Interfaces de Programación de Aplicaciones) se alzan como un pilar fundamental que permite a las aplicaciones comunicarse, compartir datos y funcionar en conjunto. A medida que nuestra vida digital se vuelve cada vez más interconectada, comprender qué es una API y cómo funciona se vuelve crucial para todos los involucrados en la creación y utilización de software. En este artículo, profundizaremos en los conceptos esenciales de las APIs, exploraremos su historia, su funcionamiento y su importancia en el panorama tecnológico actual.
+
+Desglosando las APIs: Definición y Concepto#
+¿Qué es una API?#
+En su esencia, una API es un conjunto de reglas y protocolos que permite que dos aplicaciones se comuniquen entre sí. En otras palabras, es un intermediario que permite que distintos programas interactúen y compartan datos sin la necesidad de comprender cada detalle interno del otro.
+
+Historia de las APIs#
+El concepto de las APIs tiene sus raíces en las décadas anteriores al auge de la web. Con la llegada de la programación orientada a objetos, se volvió esencial proporcionar interfaces estandarizadas para interactuar con software. Con el tiempo, la proliferación de la web y la necesidad de compartir información entre aplicaciones condujo al desarrollo de las APIs web.
+
+Funcionamiento de las APIs#
+Las APIs actúan como un conjunto de contratos que define cómo las aplicaciones pueden solicitar o enviar datos. Una aplicación que utiliza una API sabe qué solicitudes hacer y qué respuestas esperar. Las APIs permiten a los desarrolladores crear aplicaciones que se integran con otros servicios y sistemas de manera eficiente.
+
+Por Qué son Necesarias las APIs#
+Interoperabilidad#
+Las APIs permiten que diferentes aplicaciones, independientemente de su lenguaje o plataforma, trabajen juntas. Esto es fundamental para crear un ecosistema digital en el que las aplicaciones pueden colaborar y compartir información.
+
+Reutilización#
+Las APIs facilitan la reutilización de funciones y servicios. En lugar de reinventar la rueda, los desarrolladores pueden aprovechar las capacidades existentes a través de APIs.
+
+Escalabilidad#
+Las APIs permiten a las empresas expandir sus servicios sin tener que rediseñar todo su sistema. Esto facilita la adición de nuevas funcionalidades y la adaptación a las demandas cambiantes.
+
+Ventajas de Utilizar APIs#
+Aceleración del Desarrollo: Las APIs permiten a los desarrolladores construir aplicaciones más rápido al aprovechar las capacidades ya existentes.
+
+Innovación: Al utilizar APIs, los desarrolladores pueden combinar diferentes servicios para crear experiencias nuevas e innovadoras.
+
+Seguridad: Las APIs pueden limitar la cantidad de datos expuestos, proporcionando un control más preciso sobre qué datos se comparten y cómo se accede a ellos.
+
+Formato de Respuesta de las APIs#
+El formato de respuesta más común en las APIs modernas es JSON (JavaScript Object Notation) debido a su estructura liviana y fácil de leer. También se utilizan otros formatos como XML, pero JSON es ampliamente preferido debido a su simplicidad y su compatibilidad con múltiples lenguajes.
+
+Las APIs son las piedras angulares que permiten la interconexión de aplicaciones y sistemas en el mundo digital. Desde sus orígenes hasta el presente, las APIs han evolucionado para impulsar la innovación, la colaboración y la eficiencia en el desarrollo de software. Con un profundo impacto en la manera en que interactuamos con la tecnología, las APIs seguirán desempeñando un papel esencial en el panorama tecnológico en constante cambio.
+
+Ejemplos de datos en formato JSON:#
+Objeto Simple:
+{
+  "nombre": "Juan",
+  "edad": 28,
+  "ciudad": "Lima"
+}
+Arreglo de Objetos:
+[
+  {
+    "nombre": "Ana",
+    "edad": 35,
+    "ciudad": "Bogotá"
+  },
+  {
+    "nombre": "Carlos",
+    "edad": 22,
+    "ciudad": "Ciudad de México"
+  }
+]
+Anidación de Objetos:
+{
+  "persona": {
+    "nombre": "María",
+    "edad": 42,
+    "ciudad": "Santiago"
+  },
+  "intereses": ["música", "viajes", "lectura"]
+}
+Datos con Valores Nulos:
+{
+  "producto": "Smartphone",
+  "precio": 599.99,
+  "descuento": null
+}
+Formato de Fecha:
+{
+  "fecha": "2023-08-15",
+  "evento": "Conferencia de Desarrollo"
+}
+Formato de Booleanos:
+{
+  "activo": true,
+  "notificado": false
+}
+Datos Geoespaciales:
+{
+  "ubicacion": {
+    "latitud": 37.7749,
+    "longitud": -122.4194
+  },
+  "nombre": "San Francisco"
+}
+Uso de Propiedades con Guiones:
+{
+  "nombre-completo": "Ana Rodríguez",
+  "edad": 29
+}
+Datos Anidados con Arrays:
+{
+  "alumnos": [
+    {
+      "nombre": "Juan",
+      "notas": [95, 87, 92]
+    },
+    {
+      "nombre": "María",
+      "notas": [78, 88, 76]
+    }
+  ]
+}
+Respuesta API con Metadatos:
+{
+  "datos": [
+    {
+      "nombre": "Producto A",
+      "precio": 49.99
+    },
+    {
+      "nombre": "Producto B",
+      "precio": 74.99
+    }
+  ],
+  "total_productos": 2,
+  "pagina_actual": 1,
+  "por_pagina": 10
+}
+Estos ejemplos ilustran la diversidad de estructuras que se pueden representar en formato JSON. JSON es ampliamente utilizado debido a su simplicidad y facilidad de lectura tanto por humanos como por máquinas, lo que lo convierte en un formato de elección para la transferencia y almacenamiento de datos en la web.
+
+https://www.youtube.com/watch?v=u2Ms34GE14U
+https://www.youtube.com/watch?v=z8qk7T_2sWg
+
+
+--------------------------------------------------------------API REST
+
+En el mundo actual de la tecnología, las APIs REST se han convertido en la piedra angular de la interconexión digital, permitiendo que las aplicaciones interactúen y compartan datos de manera eficiente. Con su arquitectura simple y enfoque en los estándares web, las APIs REST han revolucionado la forma en que los sistemas se comunican en línea. En este artículo, exploraremos en profundidad qué son las APIs REST, su funcionamiento, ventajas y ejemplos prácticos.
+
+Entendiendo el Concepto “REST”#
+¿Qué es REST?#
+REST, por sus siglas en inglés, significa “Representational State Transfer” (Transferencia de Estado Representacional). Es un conjunto de principios y restricciones arquitecturales que definen cómo se deben diseñar y construir las APIs web. Las APIs que siguen estas directrices se conocen como APIs REST.
+
+Historia de REST#
+El término REST fue introducido por Roy Fielding en su tesis doctoral en 2000. Fielding fue uno de los coautores de la especificación HTTP (Hypertext Transfer Protocol) y jugó un papel fundamental en la evolución de la World Wide Web. La tesis de Fielding definió los principios de REST como un enfoque para diseñar sistemas web eficientes y escalables.
+
+Funcionamiento de las APIs REST#
+Las APIs REST operan en el contexto de la arquitectura cliente-servidor. Utilizan los métodos HTTP, como GET, POST, PUT y DELETE, para realizar operaciones en los recursos, que pueden ser representados por URL (Uniform Resource Locators). Estos recursos se manipulan a través de las solicitudes HTTP, y las respuestas se devuelven en formato de datos, a menudo en JSON o XML.
+
+Diferencias Entre una API Normal y una REST#
+A diferencia de las APIs tradicionales, que pueden usar diferentes protocolos y no siguen una estructura uniforme, las APIs REST se adhieren a un conjunto de principios coherentes que simplifican la comunicación entre sistemas. Esto incluye la representación de recursos a través de URLs y el uso consistente de los métodos HTTP para realizar operaciones.
+
+Ventajas de Usar APIs REST#
+Simplicidad: La arquitectura REST es simple y fácil de entender, lo que facilita la creación y el mantenimiento de APIs.
+
+Escalabilidad: Las APIs REST permiten la escalabilidad eficiente, ya que los recursos son accesibles a través de URLs y pueden distribuirse en servidores múltiples.
+
+Independencia de Plataforma: Las APIs REST pueden ser consumidas por cualquier cliente que pueda hacer solicitudes HTTP, independientemente de la plataforma o el lenguaje de programación.
+
+Ejemplos Sencillos del Funcionamiento de una API REST#
+Obtener Datos (GET)#
+Para obtener información de un recurso, como una lista de usuarios:
+
+GET /api/usuarios
+Crear un Nuevo Registro (POST)#
+Para agregar un nuevo usuario:
+
+POST /api/usuarios
+
+{
+  "nombre": "Ana",
+  "edad": 30
+}
+Actualizar un Registro Existente (PUT)#
+Para modificar los datos de un usuario existente:
+
+PUT /api/usuarios/1
+
+{
+  "nombre": "Ana Rodríguez",
+  "edad": 31
+}
+Eliminar un Registro (DELETE)#
+Para eliminar un usuario:
+
+DELETE /api/usuarios/1
+Las APIs REST han revolucionado la forma en que los sistemas se comunican en la era digital. Al adherirse a principios arquitecturales coherentes y estandarizados, las APIs REST ofrecen simplicidad, escalabilidad y independencia de plataforma. A medida que continuamos construyendo aplicaciones interconectadas y servicios web, comprender y aprovechar las capacidades de las APIs REST se convierte en una habilidad esencial para los desarrolladores modernos.
+
+Videos#
+Mira este video desde 06:04 hasta 15:01 minutos (ya está marcado).
+https://www.youtube.com/watch?v=-9d3KhCqOtU
+https://www.youtube.com/watch?v=rAylamS1Hco
+https://www.youtube.com/watch?v=JD6VNRdGl98
+
+
+----------------------------------------------------------------------TAILWINDCSS
+En este artículo, nos sumergiremos en la personalización de estilos con Tailwind CSS, un marco de trabajo que ha ganado popularidad gracias a su enfoque de “clases de utilidad”. Veremos cómo ajustar colores, tamaños de fuente y dimensiones específicas, como el ancho de un elemento. Además, exploraremos la creación de estilos personalizados para adaptar proyectos de manera única y eficiente.
+
+1. Introducción:#
+Tailwind CSS destaca por su filosofía de “no asumir nada”. Proporciona clases de bajo nivel para construir interfaces sin imponer estilos predeterminados. Veamos cómo aprovechar esta flexibilidad para personalizar nuestros estilos de manera efectiva.
+
+2. Modificando Colores y Tipografía:#
+Tailwind CSS facilita la personalización de colores y tamaños de fuente. Ejemplos prácticos incluyen:
+
+<button class="bg-teal-500 text-gray-800 font-semibold py-3 px-6 rounded-md">
+  Botón Teal
+</button>
+Aquí, bg-teal-500 establece el color de fondo teal, text-gray-800 define el color del texto como gris oscuro, y font-semibold establece la seminegrita.
+
+3. Personalización Avanzada:#
+Para ajustes más específicos, Tailwind CSS permite utilizar valores arbitrarios, como colores hexadecimales o dimensiones específicas. Ejemplos:
+
+<div class="bg-[#3498db] text-white p-4">Caja Azul con Texto Blanco</div>
+
+<div class="w-[500px] mx-auto">Contenido con Ancho de 500px centrado</div>
+Aquí, bg-[#3498db] establece el color de fondo a un azul específico, y w-[500px] define el ancho del elemento como 500 píxeles.
+
+4. Creando Estilos Personalizados:#
+Tailwind CSS facilita la creación de estilos personalizados mediante la extensión de clases. Puedes definir tus propias utilidades en tu archivo de configuración. Por ejemplo:
+
+// En tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        primary: "#ff5733", // Naranja arbitrario
+      },
+      width: {
+        "300px": "300px", // Ancho arbitrario de 300 píxeles
+      },
+    },
+  },
+  variants: {},
+  plugins: [],
+};
+Ahora, puedes usar estas personalizaciones en tu HTML:
+
+<div class="bg-primary text-white p-4">Caja Naranja con Texto Blanco</div>
+
+<div class="w-300px mx-auto">Contenido con Ancho de 300px centrado</div>
+5. Optimización y Rendimiento:#
+Tailwind CSS proporciona herramientas para purgar clases no utilizadas y minimizar el tamaño de los archivos CSS, mejorando así la velocidad de carga de nuestra aplicación.
+
+Tailwind CSS ofrece una forma sencilla y poderosa de personalizar estilos. Aprovecha valores arbitrarios para adaptar cada proyecto de manera única. Experimenta, ajusta y descubre cómo Tailwind CSS puede mejorar la eficiencia de tu flujo de trabajo y dar vida a tus diseños de manera rápida y personalizada.
+
+Recursos#
+Para más información, te recomiendo leer las siguientes páginas. Si necesitas leerlo en español puedes hacerlo traduciendo la página.
+
+https://tailwindcss.com/docs/adding-custom-styles#adding-base-syles
+https://tailwindcss.com/docs/font-family#customizing-your-theme
+https://tailwindcss.com/docs/adding-custom-styles#using-arbitrary-values
+Aquí te dejaré algunos otros videos.
+
+https://www.youtube.com/watch?v=GJgfUxFFg9g
+
+-----------------------TW focus hover y estados
+Hover#
+En Tailwind CSS, la pseudo-clase hover se utiliza para aplicar estilos a un elemento cuando el puntero del mouse se encuentra sobre él. Es una forma sencilla y poderosa de agregar interactividad y mejorar la experiencia del usuario al resaltar elementos en respuesta a la interacción del usuario.
+
+La sintaxis básica para aplicar estilos hover en Tailwind CSS es agregar el prefijo hover: antes de la clase que deseas aplicar cuando el puntero está sobre el elemento. A continuación, se muestra un ejemplo simple de cómo usar la pseudo-clase hover:
+
+<button
+  class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+>
+  Hover me
+</button>
+En este ejemplo, el botón tendrá un fondo azul cuando el puntero del mouse no esté sobre él (bg-blue-500), pero cuando el puntero se coloque sobre el botón, cambiará a un fondo azul más oscuro (bg-blue-700) debido al uso de hover:bg-blue-700.
+
+Puedes aplicar hover a cualquier clase de Tailwind CSS, lo que te permite agregar interactividad a diversos elementos como botones, enlaces, íconos, tarjetas y más. A continuación, te mostraré cómo puedes utilizar hover con diferentes propiedades de estilo en Tailwind CSS:
+
+Cambiar el color de texto al pasar el puntero sobre un enlace:
+<a href="#" class="text-blue-500 hover:text-blue-700">Enlace</a>
+Aumentar el tamaño de un ícono cuando se pasa el puntero sobre él:
+<i class="fas fa-heart text-red-500 hover:text-red-700 text-xl"></i>
+Mostrar una transición de opacidad al pasar el puntero sobre una imagen:
+<img src="imagen.jpg" class="hover:opacity-75" alt="Imagen" />
+Aplicar una sombra al pasar el puntero sobre una tarjeta:
+<div class="bg-white shadow-lg p-4 rounded-md hover:shadow-xl">
+  Contenido de la tarjeta
+</div>
+Cambiar el color de fondo de una celda de tabla cuando se pasa el puntero sobre ella:
+<table class="border-collapse">
+  <tr>
+    <td class="border px-4 py-2 hover:bg-gray-100">Celda 1</td>
+    <td class="border px-4 py-2 hover:bg-gray-100">Celda 2</td>
+  </tr>
+</table>
+Focus#
+En CSS, la pseudo-clase :focus se utiliza para aplicar estilos a un elemento cuando este tiene el enfoque. Esto sucede cuando un elemento (como un campo de entrada o un enlace) recibe el enfoque del usuario, generalmente mediante un clic o al navegar mediante teclado (usando la tecla Tab, por ejemplo). El uso de estilos :focus es fundamental para mejorar la accesibilidad y la experiencia del usuario, ya que indica claramente qué elemento está siendo seleccionado o activo.
+
+En Tailwind CSS, la sintaxis para aplicar estilos :focus es similar a la de :hover. Simplemente agrega el prefijo focus: antes de la clase que deseas aplicar cuando el elemento tiene el enfoque.
+
+Aquí tienes algunos ejemplos de cómo utilizar :focus en Tailwind CSS:
+
+Cambiar el color de borde de un campo de entrada cuando está enfocado:
+<input type="text" class="border focus:border-blue-500" />
+Resaltar un enlace con un color de fondo cuando está enfocado:
+<a href="#" class="bg-blue-500 text-white px-4 py-2 rounded focus:bg-blue-700">
+  Enlace
+</a>
+Aumentar el tamaño de un botón cuando está enfocado:
+<button
+  class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:scale-110"
+>
+  Hacer clic
+</button>
+Cambiar el color de fondo de una tarjeta cuando está enfocada:
+<div
+  class="bg-white shadow-lg p-4 rounded-md hover:shadow-xl focus:bg-gray-100"
+>
+  Contenido de la tarjeta
+</div>
+Es importante tener en cuenta que para que los estilos :focus sean aplicados, el elemento debe ser capaz de recibir el enfoque. Por ejemplo, enlaces (<a>), campos de entrada (<input>), áreas de texto (<textarea>) y elementos interactivos como botones (<button>) son elementos por defecto que pueden recibir el enfoque. Si deseas aplicar estilos :focus a otros elementos, como divs o párrafos, es posible que necesites agregar el atributo tabindex para permitir que el elemento reciba el enfoque de manera accesible.
+
+Active#
+En Tailwind CSS, manejar el estado active se refiere a aplicar estilos a un elemento cuando está activado o presionado por el usuario. Esto ocurre generalmente cuando un usuario hace clic o toca un elemento interactivo, como un botón o un enlace. Al aplicar estilos active, puedes proporcionar retroalimentación visual instantánea al usuario para indicar que su interacción ha sido reconocida.
+
+La sintaxis básica para aplicar estilos active en Tailwind CSS es agregar el prefijo active: antes de la clase que deseas aplicar cuando el elemento está activo. Es similar a cómo se utiliza hover y focus en Tailwind CSS.
+
+Aquí tienes algunos ejemplos de cómo manejar el estado active en Tailwind CSS:
+
+Cambiar el color de fondo de un botón cuando está activo:
+<button
+  class="bg-blue-500 hover:bg-blue-700 active:bg-blue-800 text-white font-bold py-2 px-4 rounded"
+>
+  Clic aquí
+</button>
+En este ejemplo, el botón tendrá un fondo azul oscuro cuando está activo debido al uso de active:bg-blue-800. Esta clase se aplicará cuando el botón está presionado por el usuario.
+
+Cambiar el color de texto de un enlace cuando está activo:
+<a href="#" class="text-blue-500 hover:text-blue-700 active:text-blue-800">
+  Enlace
+</a>
+En este caso, el enlace tendrá un color de texto azul oscuro cuando está activo debido al uso de active:text-blue-800.
+
+Aumentar el tamaño de un botón cuando está activo:
+<button
+  class="bg-green-500 hover:bg-green-700 active:scale-110 text-white font-bold py-2 px-4 rounded"
+>
+  Clic aquí
+</button>
+Este botón se escalará ligeramente cuando está activo debido al uso de active:scale-110.
+
+Al igual que con hover y focus, puedes combinar active con otras clases de Tailwind CSS para crear efectos más complejos y personalizados en respuesta a las interacciones del usuario. Además, también puedes personalizar tus propias variantes active y agregarlas al archivo de configuración (tailwind.config.js) para definir estilos activos personalizados para tu proyecto específico.
+https://www.youtube.com/watch?v=G_1W5UPFFWk
+
+------------------------TW responsive
+¿Qué es Responsive Design?#
+Responsive Design (Diseño Responsivo) es una técnica de diseño web que busca adaptar y optimizar la apariencia y la experiencia de usuario de un sitio web en diferentes dispositivos y tamaños de pantalla. El objetivo principal es garantizar que el contenido y el diseño se vean bien y sean fáciles de usar en computadoras de escritorio, tablets, smartphones y otros dispositivos.
+
+Tailwind CSS y Responsive Design#
+Tailwind CSS es un framework de CSS utility-first que proporciona una forma eficiente de construir interfaces responsive y personalizables. El enfoque utility-first de Tailwind CSS facilita la creación de diseños responsive, ya que ofrece un conjunto completo de clases utilitarias que permiten ajustar el diseño en función de las necesidades de diferentes dispositivos.
+
+Clases Responsive en Tailwind CSS#
+Tailwind CSS ofrece clases especiales para trabajar con diseños responsive. Estas clases utilizan el prefijo “sm:”, “md:”, “lg:”, “xl:”, y “2xl:” para definir diferentes tamaños de pantalla. Cuando se usan, los estilos asociados se aplicarán solo a las pantallas con el tamaño especificado o superior.
+
+Alt text
+Ejemplos con Código#
+Ocultar un elemento en pantallas pequeñas y mostrarlo en pantallas medianas y superiores:
+<div class="hidden sm:block">
+  Este contenido estará oculto en pantallas pequeñas pero visible en pantallas
+  medianas y superiores.
+</div>
+Cambiar el tamaño del texto en diferentes tamaños de pantalla:
+<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+  Título Responsive
+</h1>
+Alineación de elementos en diferentes tamaños de pantalla:
+<div
+  class="flex justify-center sm:justify-start md:justify-between lg:justify-end xl:justify-around"
+>
+  <div>Elemento 1</div>
+  <div>Elemento 2</div>
+  <div>Elemento 3</div>
+</div>
+Trabajando móvil primero#
+De forma predeterminada, Tailwind utiliza un sistema de punto de interrupción de prioridad móvil, similar al que podría estar acostumbrado en otros marcos como Bootstrap.
+
+Orientación a pantallas móviles#
+Donde este enfoque sorprende a la gente con mayor frecuencia que, para diseñar algo para dispositivos móviles, debe usar la versión sin prefijo de una utilidad, no la versión con el prefijo sm. No pienses que sm significa “en pantallas pequeñas”, piensa que es “en el punto de interrupción pequeño “.
+
+No utilizar sm para segmentar dispositivos móviles
+<!-- Esto solo centrará el texto en pantallas de 640 px y más anchas, no en pantallas pequeñas -->
+<div class="sm:text-center"></div>
+Use utilidades sin prefijo para apuntar a dispositivos móviles y anúlelas en puntos de interrupción más grandes.
+<!-- Esto centrará el texto en el móvil y lo alineará a la izquierda en pantallas de 640 px y más anchas. -->
+<div class="text-center sm:text-left"></div>
+Por esta razón, a menudo es una buena idea implementar primero el diseño móvil para un diseño, luego superponer cualquier cambio que tenga sentido para las pantallas sm, seguido de pantallas md, etc.
+
+Personalización de Breakpoints en Tailwind CSS#
+Además de los breakpoints predefinidos, Tailwind CSS permite personalizar los puntos de quiebre según tus necesidades. En el archivo “tailwind.config.js”, puedes modificar la propiedad “breakpoints” para agregar o ajustar los tamaños de pantalla:
+
+module.exports = {
+  theme: {
+    screens: {
+      'tablet': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'laptop': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'desktop': '1280px',
+      // => @media (min-width: 1280px) { ... }
+    },
+  }
+}
+Luego, puedes usar estos breakpoints personalizados en tu código:
+
+<div class="hidden tablet:block">
+  Este contenido estará oculto en pantallas más pequeñas que 'tablet' y visible
+  en 'tablet' y superiores.
+</div>
+Valores arbitrarios#
+Si necesita usar un punto de interrupción único que no tiene sentido incluir en su tema, use los modificadores min o max para generar un punto de interrupción personalizado sobre la marcha usando cualquier valor arbitrario.
+
+<div class="min-[320px]:text-center max-[600px]:bg-sky-300">
+  <!-- ... -->
+</div>
+Ventajas del Responsive Design en Tailwind CSS#
+Facilidad de uso: Tailwind CSS facilita la creación de interfaces responsive al proporcionar clases utilitarias y breakpoints predefinidos.
+Flexibilidad: Con la personalización de breakpoints, puedes adaptar el diseño de manera más precisa a las necesidades de tu proyecto.
+Eficiencia: Utilizar clases utilitarias reduce la necesidad de escribir CSS personalizado, lo que puede resultar en hojas de estilo más livianas y un mejor rendimiento del sitio.
+Consistencia: Tailwind CSS proporciona una metodología coherente para trabajar con estilos responsive, lo que facilita el mantenimiento y la colaboración en proyectos.
+https://www.youtube.com/watch?v=zWc4Y78DAB0
+
+----------------TW Dark Mode
+Tailwind CSS es un framework de diseño moderno y altamente personalizable que ha ganado popularidad en el desarrollo web por su enfoque de “utility-first”. Permite a los desarrolladores crear interfaces web de manera eficiente mediante la combinación de clases utilitarias para diseñar componentes. Una de las características destacadas de Tailwind CSS es su capacidad para implementar fácilmente un modo oscuro o “Dark Mode” en una aplicación web, lo que permite a los usuarios cambiar el aspecto visual del sitio para reducir la fatiga visual en entornos de poca luz y mejorar la experiencia del usuario.
+
+Sintaxis básica para habilitar el Dark Mode en Tailwind#
+Tailwind CSS ofrece un modo oscuro incorporado que se puede habilitar agregando algunas configuraciones al archivo de configuración. Por lo general, el modo oscuro se controla mediante la clase dark. Aquí hay un ejemplo básico de cómo habilitar el modo oscuro en Tailwind:
+
+Primero, asegúrate de que esté habilitado el modo oscuro en el archivo de configuración tailwind.config.js:
+module.exports = {
+  darkMode: "class", // Alternativas: 'media', 'false'
+  // Resto de la configuración...
+};
+Ahora, puedes usar la clase dark en cualquier lugar de tu HTML para aplicar estilos específicos para el modo oscuro:
+<div class="bg-white dark:bg-black">
+  <p class="text-gray-800 dark:text-white">
+    Este es un ejemplo de texto que cambiará su apariencia en el modo oscuro.
+  </p>
+</div>
+Ventajas del Dark Mode en Tailwind#
+Mejora la experiencia del usuario: El modo oscuro puede ayudar a reducir la fatiga visual y el estrés ocular, especialmente en entornos con poca luz o durante largas sesiones nocturnas.
+
+Estilo moderno: El modo oscuro se ha vuelto muy popular en la última década debido a su atractivo estético y apariencia moderna.
+
+Accesibilidad: Implementar un modo oscuro puede mejorar la accesibilidad para usuarios con sensibilidad a la luz o problemas visuales.
+
+Diferenciación del sitio web: Ofrecer un modo oscuro puede ser una forma de destacar entre la competencia y brindar una experiencia única a los usuarios.
+
+Desventajas del Dark Mode en Tailwind#
+Compatibilidad del navegador: Algunos navegadores más antiguos pueden no ser totalmente compatibles con el modo oscuro, lo que puede afectar la experiencia del usuario.
+
+Diseño adicional: Implementar un modo oscuro puede requerir tiempo y esfuerzo adicionales para diseñar estilos específicos y garantizar una apariencia coherente en ambos modos.
+
+Aumento del tamaño del archivo: La adición de estilos adicionales para el modo oscuro puede aumentar el tamaño total del archivo CSS, lo que afecta el tiempo de carga de la página.
+
+Ejemplos de código con Tailwind Dark Mode#
+Cambiar el esquema de color de un botón en modo oscuro:
+<button
+  class="px-4 py-2 bg-blue-500 text-white dark:bg-gray-700 dark:text-yellow-300"
+>
+  Enviar
+</button>
+Cambiar el tamaño del texto según el modo oscuro:
+<p class="text-xl dark:text-2xl">
+  Este es un texto de tamaño normal, pero más grande en modo oscuro.
+</p>
+Personalización del Dark Mode en Tailwind#
+Tailwind CSS permite personalizar completamente el modo oscuro según tus preferencias de diseño. Puedes modificar los colores, tamaños de fuente, espaciado y cualquier otro atributo que desees. Para personalizar el modo oscuro, puedes agregar o modificar las propiedades correspondientes en el archivo tailwind.config.js.
+
+Por ejemplo, para cambiar los colores predeterminados del modo oscuro:
+
+module.exports = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        darkModeBackground: "#121212",
+        darkModeText: "#f1f1f1",
+        darkModeAccent: "#4a90e2",
+      },
+    },
+  },
+  // Resto de la configuración...
+};
+Luego, en tu HTML, puedes usar estas clases personalizadas:
+
+<div class="bg-white dark:bg-darkModeBackground">
+  <p class="text-gray-800 dark:text-darkModeText">
+    Este es un ejemplo de texto personalizado en modo oscuro.
+  </p>
+  <button
+    class="px-4 py-2 bg-darkModeAccent text-white dark:bg-gray-700 dark:text-yellow-300"
+  >
+    Enviar
+  </button>
+</div>
+Con esta configuración, puedes ajustar completamente el aspecto del modo oscuro para que se adapte al diseño de tu sitio web y cumpla con tus preferencias visuales.
+
+El modo oscuro en Tailwind CSS es una característica poderosa que permite a los desarrolladores crear interfaces web modernas y atractivas con facilidad. Ofrece ventajas en términos de experiencia del usuario y accesibilidad, pero también presenta desafíos relacionados con la compatibilidad del navegador y el diseño adicional necesario. Afortunadamente, Tailwind CSS proporciona herramientas para personalizar completamente el modo oscuro y adaptarlo al estilo único de cada sitio web.
+https://www.youtube.com/watch?v=RGpTo-30yLE
+
+Los Custom Hooks en React han revolucionado la forma en que los desarrolladores estructuran sus aplicaciones y comparten lógica entre componentes. Este artículo explorará en detalle qué son los Custom Hooks, por qué y cuándo se deben utilizar, y cómo crear y aplicar dos ejemplos prácticos. Al dominar esta poderosa característica de React, los desarrolladores pueden mejorar la reutilización del código, la legibilidad y la mantenibilidad de sus aplicaciones.
+
+Introducción#
+React es una biblioteca de JavaScript que se destaca por su capacidad para construir interfaces de usuario interactivas y reactivas. Uno de los conceptos clave en React es el componente, que encapsula la lógica y la interfaz de usuario de una parte de la aplicación. Sin embargo, a medida que las aplicaciones crecen en complejidad, es común encontrarse con lógica compartida entre componentes. Ahí es donde entran en juego los Custom Hooks.
+
+¿Qué es un Custom Hook?#
+Un Custom Hook en React es una función JavaScript que encapsula lógica compartida entre componentes. Los Custom Hooks se pueden utilizar para extraer la lógica de un componente y reutilizarla en otros componentes. Estas funciones personalizadas se nombran comúnmente con el prefijo “use” para indicar su relación con los Hooks de React.
+
+¿Por qué utilizar Custom Hooks?#
+Reutilización de código#
+Uno de los principales beneficios de los Custom Hooks es la reutilización de código. Cuando varias partes de la aplicación necesitan la misma funcionalidad, como la gestión del estado local, la llamada a una API o la suscripción a eventos, es más eficiente y limpio encapsular esa lógica en un Custom Hook y reutilizarlo en lugar de duplicar código en múltiples componentes.
+
+Legibilidad del código#
+Los Custom Hooks también mejoran la legibilidad del código. Al separar la lógica del componente, los componentes principales se vuelven más simples y fáciles de entender. Esto facilita la colaboración entre desarrolladores y el mantenimiento a largo plazo de la aplicación.
+
+Composición y separación de preocupaciones#
+Los Custom Hooks permiten separar las preocupaciones en una aplicación. Cada Hook puede centrarse en una tarea específica, lo que facilita la comprensión y el mantenimiento del código. Esto fomenta la composición de componentes más pequeños y especializados en lugar de componentes enormes y difíciles de gestionar.
+
+¿Cuándo utilizar Custom Hooks?#
+Los Custom Hooks son útiles en varias situaciones, incluyendo:
+
+Lógica compartida#
+Cuando múltiples componentes necesitan realizar la misma tarea o contienen la misma lógica, como la validación de formularios o la gestión de sesiones de usuario.
+
+Abstracción de componentes#
+Cuando se desea abstraer la lógica de un componente para que pueda ser reutilizada con diferentes interfaces de usuario o en diferentes partes de la aplicación.
+
+Simplificación de componentes#
+Cuando un componente se vuelve demasiado grande y complejo, los Custom Hooks permiten dividirlo en funciones más pequeñas y manejables.
+
+Cómo crear y utilizar Custom Hooks#
+Creación de un Custom Hook#
+Crear un Custom Hook es sencillo. Solo tienes que seguir estas pautas:
+
+Crea una función JavaScript que contenga la lógica que deseas reutilizar.
+
+Usa el prefijo “use” en el nombre del Hook para seguir la convención de nombres de React.
+
+Puedes utilizar otros Hooks de React dentro de tu Custom Hook si es necesario.
+
+Exporta la función para que esté disponible para otros componentes.
+
+Ejemplo 1: Custom Hook para el manejo del estado#
+Supongamos que deseamos crear un Custom Hook para gestionar el estado de un componente de formulario. Aquí hay un ejemplo:
+
+import { useState } from "react";
+
+function useForm(initialState) {
+  const [values, setValues] = useState(initialState);
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setValues({
+      ...values,
+      [name]: value,
+    });
+  }
+
+  return [values, handleChange];
+}
+
+export default useForm;
+Ejemplo 2: Custom Hook para la gestión de efectos secundarios#
+Supongamos que queremos encapsular la lógica para cargar datos desde una API en un Custom Hook. Aquí tienes un ejemplo:
+
+import { useState, useEffect } from "react";
+
+function useFetchData(url) {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(url);
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, [url]);
+
+  return data;
+}
+
+export default useFetchData;
+Utilización de los Custom Hooks#
+Para utilizar los Custom Hooks en tus componentes, simplemente importa la función del Hook y utilízala como cualquier otro Hook de React.
+
+import React from "react";
+import useForm from "./useForm";
+
+function MyForm() {
+  const [values, handleChange] = useForm({ name: "", email: "" });
+
+  return (
+    <form>
+      <input
+        type="text"
+        name="name"
+        value={values.name}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        name="email"
+        value={values.email}
+        onChange={handleChange}
+      />
+    </form>
+  );
+}
+
+export default MyForm;
+Los Custom Hooks son una característica poderosa de React que facilita la reutilización de código, mejora la legibilidad y promueve la separación de preocupaciones en una aplicación. Al comprender qué son, por qué utilizarlos y cómo crearlos, los desarrolladores pueden aprovechar al máximo esta herramienta para construir aplicaciones más mantenibles y escalables. Al aplicar los ejemplos proporcionados, podrás empezar a utilizar Custom Hooks de manera efectiva en tus proyectos de React.
+
+Recursos
+https://www.youtube.com/watch?v=K4vCTeKKCkU
+https://www.youtube.com/watch?v=xutmKvLsbKM
+
+--------------------------------------------------- FETCH API
+En el ecosistema de desarrollo web moderno, interactuar con APIs externas es esencial para construir aplicaciones ricas en datos y funcionalidad. React, siendo una de las bibliotecas más populares para crear interfaces de usuario, ofrece una forma poderosa de hacer solicitudes a APIs externas mediante la Fetch API. En este artículo, exploraremos en detalle cómo realizar solicitudes a APIs externas en React, desde conceptos básicos hasta buenas prácticas y ejemplos prácticos.
+
+Comprendiendo las APIs y Fetch#
+¿Qué es una API?#
+Una API (Interfaz de Programación de Aplicaciones) es un conjunto de reglas y protocolos que permite que diferentes aplicaciones se comuniquen entre sí. Proporciona una forma estandarizada para que las aplicaciones accedan y compartan datos y funcionalidades.
+
+¿Qué es Fetch en JavaScript?#
+Fetch es una API nativa de JavaScript que permite realizar solicitudes HTTP a recursos en línea, como APIs. Fetch proporciona una interfaz más moderna y versátil para realizar solicitudes que las alternativas anteriores, como XMLHttpRequest.
+
+Por Qué Hacer Fetch a una API#
+Realizar solicitudes a APIs externas en React es fundamental para:
+
+Obtener datos en tiempo real desde fuentes externas.
+Integrar contenido dinámico en las aplicaciones.
+Acceder a recursos y servicios de terceros.
+Sincronizar y actualizar información en aplicaciones.
+Ventajas de Hacer Fetch a una API#
+Dinamismo: Las APIs externas permiten que tus aplicaciones se mantengan actualizadas y ricas en contenido dinámico.
+
+Reutilización: Puedes aprovechar los datos y recursos proporcionados por APIs existentes en lugar de recrearlos desde cero.
+
+Economía de Recursos: Al utilizar servicios de terceros, ahorras tiempo y recursos al no tener que desarrollar todas las funcionalidades internamente.
+
+Sintaxis Básica de Fetch en React#
+fetch("https://api.example.com/data")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Data from API:", data);
+  })
+  .catch((error) => {
+    console.error("Error fetching data:", error);
+  });
+En este ejemplo, fetch se utiliza para realizar una solicitud GET a la URL proporcionada. Luego, los métodos .then() se encadenan para procesar la respuesta y los datos.
+
+Ejemplos Prácticos#
+Uso de fetch con then#
+import React, { useState, useEffect } from "react";
+
+function FetchWithThenExample() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.example.com/posts")
+      .then((response) => response.json())
+      .then((jsonData) => setData(jsonData))
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+
+  return (
+    <div>
+      <h2>Posts from API:</h2>
+      <ul>
+        {data.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default FetchWithThenExample;
+Uso de fetch con async/await#
+import React, { useState, useEffect } from "react";
+
+function FetchWithAsyncAwaitExample() {
+  const [data, setData] = useState([]);
+
+  async function fetchData() {
+    try {
+      const response = await fetch("https://api.example.com/comments");
+      const jsonData = await response.json();
+      setData(jsonData);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h2>Comments from API:</h2>
+      <ul>
+        {data.map((comment) => (
+          <li key={comment.id}>{comment.body}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default FetchWithAsyncAwaitExample;
+Buenas Prácticas: Custom Hooks para Fetch#
+Un enfoque limpio y reutilizable para hacer Fetch a una API es crear un custom hook. Aquí hay un ejemplo de cómo podrías hacerlo:
+
+import { useState, useEffect } from "react";
+
+function useFetch(url) {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  async function fetchData() {
+    try {
+      const response = await fetch(url);
+      const jsonData = await response.json();
+      setData(jsonData);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return { data, loading };
+}
+
+export default useFetch;
+Puedes usar este custom hook en tus componentes:
+
+import React from "react";
+import useFetch from "./useFetch";
+
+function CustomHookExample() {
+  const { data, loading } = useFetch("https://api.example.com/data");
+
+  return (
+    <div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <ul>
+          {data.map((item) => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+export default CustomHookExample;
+Hacer Fetch a APIs externas en React es una habilidad esencial para crear aplicaciones interactivas y dinámicas que se conectan con el mundo exterior. La Fetch API proporciona una forma sencilla y poderosa de realizar solicitudes HTTP y obtener datos en tiempo real. A través de ejemplos prácticos, hemos explorado cómo usar fetch con then y async/await, así como cómo implementar un custom hook reutilizable para manejar solicitudes a APIs de manera eficiente. Con esta capacidad en tu caja de herramientas, estarás listo para construir aplicaciones que se comunican con el mundo y ofrecen experiencias enriquecedoras a los usuarios.
+
+---------------------------------------------------------------- react useContext
+En el mundo de React, la gestión del estado es fundamental. Sin embargo, a medida que las aplicaciones crecen en complejidad, la propensión a tener un código desordenado aumenta. Aquí es donde useContext entra en juego. Este artículo aborda en profundidad el concepto de useContext en React, explicando qué es, por qué se debe usar, cuándo aplicarlo y cómo aprovecharlo al máximo. Además, proporciona dos ejemplos prácticos que hacen uso de useContext para consumir datos de una API.
+
+Introducción#
+React es una biblioteca de JavaScript que se ha destacado por su capacidad para construir interfaces de usuario interactivas y reactivas. A medida que las aplicaciones React crecen, se vuelve esencial una gestión eficiente del estado. useContext es una característica fundamental de React que ayuda a gestionar el estado de manera limpia y eficiente al proporcionar un contexto global accesible desde cualquier parte de la aplicación.
+
+¿Qué es useContext?#
+useContext es un hook de React que permite acceder al contexto de la aplicación desde cualquier componente, sin importar su profundidad en el árbol de componentes. El contexto es una forma de pasar datos a través del árbol de componentes sin tener que pasar propiedades manualmente a cada nivel.
+
+¿Por qué utilizar useContext?#
+Evita la “prop drilling”#
+En aplicaciones de React, es común pasar datos desde un componente principal a través de múltiples niveles de componentes secundarios. Esto se conoce como “prop drilling”, y puede volverse engorroso y propenso a errores a medida que la aplicación crece. useContext resuelve este problema al permitir el acceso directo a los datos necesarios sin pasarlos explícitamente a través de props.
+
+Simplifica la gestión del estado global#
+Para aplicaciones que requieren un estado global, como la autenticación del usuario o la configuración de la aplicación, useContext proporciona una forma sencilla de compartir y actualizar ese estado en cualquier parte de la aplicación. Esto mejora la mantenibilidad y la claridad del código.
+
+Mejora la legibilidad del código#
+Al eliminar la necesidad de pasar datos de manera explícita a través de props, el código se vuelve más limpio y legible. Los componentes pueden centrarse en su función principal en lugar de preocuparse por la transferencia de datos.
+
+¿Cuándo utilizar useContext?#
+useContext es útil en varias situaciones:
+
+Aplicaciones con un estado global#
+Cuando necesitas acceder o modificar datos en múltiples componentes a lo largo de la aplicación, como la autenticación, las preferencias del usuario o la gestión del carrito de compras.
+
+Reducción del “prop drilling”#
+Cuando encuentras que la transferencia de datos a través de props se vuelve confusa o incómoda debido a la profundidad del árbol de componentes.
+
+Claridad y simplicidad#
+Cuando deseas mejorar la legibilidad y el mantenimiento del código al evitar la propagación innecesaria de datos.
+
+Cómo utilizar useContext#
+Creación de un contexto#
+Primero, debes crear un contexto utilizando la función createContext. Este contexto contendrá los datos globales que deseas compartir.
+
+import { createContext } from "react";
+
+const MiContexto = createContext();
+Proveer datos al contexto#
+A continuación, debes utilizar un componente proveedor para suministrar los datos al contexto. Esto se hace utilizando el componente <MiContexto.Provider> y pasándole un valor.
+
+import { createContext, useState } from "react";
+
+const MiContexto = createContext();
+
+function MiContextoProvider(props) {
+  const [miDato, setMiDato] = useState("Valor inicial");
+
+  return (
+    <MiContexto.Provider value={{ miDato, setMiDato }}>
+      {props.children}
+    </MiContexto.Provider>
+  );
+}
+Consumir datos del contexto#
+Por último, en cualquier componente que necesite acceder a los datos del contexto, puedes utilizar el hook useContext para hacerlo.
+
+import React, { useContext } from "react";
+import MiContexto from "./MiContexto";
+
+function ComponenteConsumidor() {
+  const { miDato, setMiDato } = useContext(MiContexto);
+
+  return (
+    <div>
+      <p>Mi dato global: {miDato}</p>
+      <button onClick={() => setMiDato("Nuevo valor")}>Cambiar Dato</button>
+    </div>
+  );
+}
+Ejemplo 1: Consumiendo datos de una API con useContext#
+Supongamos que deseamos crear un contexto que almacene los datos de una API. Aquí está el código:
+
+import React, { createContext, useEffect, useState } from "react";
+
+const ApiContext = createContext();
+
+function ApiContextProvider(props) {
+  const [data, setData] = useState([]);
+  const apiUrl = "https://api.example.com/data";
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const response = await fetch(apiUrl);
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+    fetchData();
+  }, []);
+
+  return (
+    <ApiContext.Provider value={data}>{props.children}</ApiContext.Provider>
+  );
+}
+
+export { ApiContext, ApiContextProvider };
+Luego, en cualquier componente de la aplicación, podemos consumir los datos de la API utilizando useContext:
+
+import React, { useContext } from "react";
+import { ApiContext } from "./ApiContextProvider";
+
+function DataDisplay() {
+  const data = useContext(ApiContext);
+
+  return (
+    <div>
+      <h2>Data from API</h2>
+      <ul>
+        {data.map((item) => (
+          <li key={item.id}>{item.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default DataDisplay;
+Ejemplo 2: Cambio de tema con useContext#
+Supongamos que deseamos permitir a los usuarios cambiar el tema de la aplicación. Aquí está el código:
+
+import React, { createContext, useContext, useState } from "react";
+
+const ThemeContext = createContext();
+
+function ThemeContextProvider(props) {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      {props.children}
+    </ThemeContext.Provider>
+  );
+}
+
+export { ThemeContext, ThemeContextProvider };
+Luego, en cualquier componente de la aplicación, podemos consumir y cambiar
+
+Recursos
+https://www.youtube.com/watch?v=mzqRLumrJXY
+https://www.youtube.com/watch?v=lSMBhUEVK8k
+
+
+Practicas:
+5)https://funvalprogra.github.io/platform/react/practicas/sunnyside/
+6)https://funvalprogra.github.io/platform/react/practicas/news/
+7)https://funvalprogra.github.io/platform/react/practicas/pokeapi/
+8)https://funvalprogra.github.io/platform/react/practicas/custom_hooks/
+9)https://funvalprogra.github.io/platform/react/practicas/usecontext/
+10)https://funvalprogra.github.io/platform/react/practicas/librerias_componentes/
+
+
